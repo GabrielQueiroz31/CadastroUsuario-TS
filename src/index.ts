@@ -7,9 +7,9 @@ interface Usuario{
 
 function renderizarPerfil(usuario: Usuario): void {
   if (usuario.isAdmin) {
-    console.log(`Usuário Administrador: ${usuario.nome} (${usuario.email})`);
+    console.log(`Status: Administrador: ${usuario.nome} (${usuario.email})`);
   } else {
-    console.log(`Usuário Comum: ${usuario.nome} (${usuario.email})`);
+    console.log(`Status: Usuário Comum`);
   }
 }
 

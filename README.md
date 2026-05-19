@@ -8,7 +8,7 @@ Este projeto consiste em um sistema simples de cadastro de usuários.
 
 O programa cria uma interface chamada `Usuario`, contendo as propriedades `id`, `nome`, `email` e `isAdmin`.
 
-Também foi criada uma função chamada `renderizarPerfil`, que recebe um usuário e exibe no console se ele é um usuário administrador ou um usuário comum.
+Também foi criada uma função chamada `renderizarPerfil`, que recebe um usuário e exibe no console o status dele, mostrando se ele é administrador ou usuário comum.
 
 ## Tecnologias Utilizadas
 
@@ -30,9 +30,9 @@ CadastroUsuario-TS/
 ## Funcionalidades
 
 - Criação de uma interface `Usuario`
-- Cadastro de usuários com nome, e-mail, id e tipo de acesso
+- Cadastro de usuários com id, nome, e-mail e tipo de acesso
 - Verificação se o usuário é administrador ou comum
-- Exibição das informações no console
+- Exibição do status do usuário no console
 
 ## Como Executar
 
@@ -46,19 +46,25 @@ npm run dev
 
 ## Saída Esperada
 
-Usuário Administrador: Gomes (gomes@email.com)
-Usuário Comum: Enzo (Enzo@email.com)
+Status: Administrador: Gomes (gomes@email.com)
+Status: Usuário Comum
 
 ## Como Funciona
 
 A interface `Usuario` define quais informações um usuário precisa ter.
+
+Cada usuário possui um `id`, um `nome`, um `email` e a propriedade `isAdmin`.
 
 O campo `isAdmin` recebe um valor booleano:
 
 - `true` significa que o usuário é administrador
 - `false` significa que o usuário é comum
 
-A função `renderizarPerfil` verifica esse valor e mostra uma mensagem diferente no console.
+A função `renderizarPerfil` verifica esse valor.
+
+Se `isAdmin` for `true`, o programa exibe o status de administrador junto com o nome e o e-mail do usuário.
+
+Se `isAdmin` for `false`, o programa exibe apenas o status de usuário comum.
 
 ## Conceitos Praticados
 
@@ -67,6 +73,7 @@ A função `renderizarPerfil` verifica esse valor e mostra uma mensagem diferent
 - Objetos
 - Funções
 - Condicional if/else
+- Valores booleanos
 - Execução de código TypeScript com Node.js
 
 ## Autor
